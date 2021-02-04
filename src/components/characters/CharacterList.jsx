@@ -11,7 +11,7 @@ const CharacterList = ({ characters }) => {
 
   return (
     <ul>
-      {charactersElements}
+      {characterElements}
     </ul>
   );
 };
