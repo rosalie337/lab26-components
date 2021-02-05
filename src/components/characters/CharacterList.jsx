@@ -1,11 +1,17 @@
 import React from 'react';
+import {
+  Link
+} from "react-router-dom";
 import PropTypes from 'prop-types';
 import Character from './Character';
 
+
 const CharacterList = ({ characters }) => {
   const characterElements = characters.map(character => (
-    <li key={character.id}>
-      <Character {...character} />
+    <li key={character._id}>
+      <Link to={`/details/${character._id}`}>
+        <Character {...character} />
+      </Link>
     </li>
   ));
 
@@ -16,13 +22,13 @@ const CharacterList = ({ characters }) => {
   );
 };
 
-CharacterList.PropTypes = {
+CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.number.isRequired,
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
 
-  })).isRequired
+  }))
 };
 
 export default CharacterList;
