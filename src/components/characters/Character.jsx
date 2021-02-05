@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Character = ({ name, image }) => (
   <figure>
     <img scr={image}>
-      <figcaption>{name}</figcaption>
     </img>
+      <figcaption>{name}</figcaption>
   </figure>
 );
 

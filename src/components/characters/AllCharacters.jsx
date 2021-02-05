@@ -15,7 +15,7 @@ export default class AllCharacters extends Component {
 
     render() {
       const { characters } = this.state;
-
+      
       return (
         <CharacterList characters={characters} />
       );
