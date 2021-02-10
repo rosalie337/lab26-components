@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Character = ({ name, image }) => (
   <figure>
-    <img scr={image}>
+    <img src={image}>
     </img>
       <figcaption>{name}</figcaption>
   </figure>
