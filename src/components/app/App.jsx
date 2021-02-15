@@ -14,11 +14,7 @@ export default function App() {
       <Greeting />
       <Switch>
         <Route exact path="/" component={AllCharacters}/>
-        <Route path="/details/:id" 
-        render={(routerProps) => 
-          <CharacterDetail {...routerProps}/>
-        }
-         />
+        <Route path="details/:id" component={CharacterDetail} />
       </Switch>
    </Router>
   );

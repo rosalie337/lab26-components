@@ -5,8 +5,8 @@ import Character from '../characters/Character';
 export default class CharacterDetail extends Component {
 
     state = {
-        character: {}
-    };
+        character: []
+    }
 
     componentDidMount() {
         getCharacterById(props.match.params.id)
@@ -15,12 +15,12 @@ export default class CharacterDetail extends Component {
 
 
     render() {
-        console.log(this.state.character)
+        const { character } = this.state;
         return (
             <div>
                 <h1>I'M HERE</h1>
                <Character character={this.state.character}/> 
             </div>
-        )
+        );
     }
 }
