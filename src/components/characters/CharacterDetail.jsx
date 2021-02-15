@@ -1,23 +1,26 @@
 import React, { Component } from 'react'
 import { getCharacterById } from '../../services/getCharacterById';
-
+import Character from '../characters/Character';
 
 export default class CharacterDetail extends Component {
 
-    start = {
+    state = {
         character: {}
-    };
-
-    componentDidMount() {
-        getCharacterById()
-            .then(character => this.setState({ }))
     }
 
+    componentDidMount() {
+        getCharacterById(props.match.params.id)
+            .then(character => this.setState({ character }))
+    }
+
+
     render() {
+
         return (
             <div>
-                
+                <h1>I'M HERE</h1>
+               <Character character={this.state.character}/> 
             </div>
-        )
+        );
     }
 }

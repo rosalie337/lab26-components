@@ -13,8 +13,8 @@ export default function App() {
    <Router>
       <Greeting />
       <Switch>
-        <Route path="/" component={AllCharacters}/>
-        <Route path="/details/id" component={CharacterDetail}/>
+        <Route exact path="/" component={AllCharacters}/>
+        <Route path="details/:id" component={CharacterDetail} />
       </Switch>
    </Router>
   );
