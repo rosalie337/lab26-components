@@ -19,8 +19,7 @@ export default class CharacterDetail extends Component {
 
         return (
             <>
-             <h1>I'M HERE</h1>
-            <Character {...character}/> 
+                <Character {...character}/> 
             </>
         );
     }
