@@ -9,18 +9,19 @@ export default class CharacterDetail extends Component {
     }
 
     componentDidMount() {
-        getCharacterById(props.match.params.id)
+        getCharacterById(this.props.match.params.id)
             .then(character => this.setState({ character }))
     }
 
 
     render() {
+        const { character } = this.state;
 
         return (
-            <div>
-                <h1>I'M HERE</h1>
-               <Character character={this.state.character}/> 
-            </div>
+            <>
+             <h1>I'M HERE</h1>
+            <Character {...character}/> 
+            </>
         );
     }
 }

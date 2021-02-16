@@ -10,12 +10,19 @@ import CharacterDetail from '../characters/CharacterDetail';
 
 export default function App() {
   return (
-   <Router>
+    <Router>
       <Greeting />
       <Switch>
-        <Route exact path="/" component={AllCharacters}/>
-        <Route path="details/:id" component={CharacterDetail} />
+        <Route path="/"
+          exact
+          render={(routerProps) => <AllCharacters {...routerProps}
+          />} />
+        <Route
+          path="/details/:id"
+          exact
+          render={(routerProps) => <CharacterDetail {...routerProps}
+          />} />
       </Switch>
-   </Router>
-  );
-}
+    </Router>
+  )
+};
